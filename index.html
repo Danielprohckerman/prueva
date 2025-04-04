@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function iniciarSesion() {
+            var usuario = document.getElementById("username").value;
+            var contrasena = document.getElementById("password").value;
+
+            if (usuario === "ciber" && contrasena === "listas2026") {
+                // Redirigir a otra página (puedes cambiar "pagina.html" al nombre de tu página)
+                window.location.href = "adregacionnesS.html";
+            } else {
+                alert("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button onclick="iniciarSesion()">Iniciar Sesión</button>
+    </div>
+
+</body>
+
+</html>
